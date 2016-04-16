@@ -1,10 +1,8 @@
 package package2;
 
 /*
-
 Author: Akash Darak
 Date: 03/20/2016
-
 */
 
 import java.io.IOException;
@@ -40,9 +38,7 @@ public class Map1 extends Mapper<LongWritable,Text,Text,IntWritable>{
 				
 				if(token.length() != 0) {
 					keys = author + "\t" + token;
-					//Buffer = substring;
 					word.set(keys);
-					//context.write(word, new IntWritable(1));
 					context.write(word, one);
 				}
 	
@@ -52,7 +48,5 @@ public class Map1 extends Mapper<LongWritable,Text,Text,IntWritable>{
 		}catch(Exception e){
 			
 		}
-
 	}
-
 }
