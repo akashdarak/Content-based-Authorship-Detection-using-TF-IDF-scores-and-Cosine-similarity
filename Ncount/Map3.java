@@ -2,14 +2,6 @@ package package2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-//import java.util.StringTokenizer;
-
-
-//import org.apache.hadoop.io.IntWritable;
-//import org.apache.hadoop.io.LongWritable;
-
-
-
 import java.util.StringTokenizer;
 
 import org.apache.hadoop.io.LongWritable;
@@ -22,10 +14,8 @@ import org.apache.hadoop.mapreduce.Mapper.Context;
 public class Map3 extends Mapper<LongWritable, Text, Text, Text> {
 	
 	private String author=null;
-//	private String keys=null;
 	private String word=null;
 	private String[] str=null;
-//	private final static IntWritable one = new IntWritable(1);
 	BufferedReader input = null;
 	
 	public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -56,23 +46,4 @@ public class Map3 extends Mapper<LongWritable, Text, Text, Text> {
 	
 	
 }	
-		
-		
-		/*
-		String line = value.toString();
-		if(line.contains("\t")){
-			String[] input = value.toString().split("\t");
-			String author1 = input[0];
-			String word1 = input[1];
-			
-			word.set(word1);
-			author.set(author1);
-			
-	        context.write(new Text(word), new Text(author));
-			
-		//	line = input.readLine();
-	        
-			
-		} 
-		*/
 	
