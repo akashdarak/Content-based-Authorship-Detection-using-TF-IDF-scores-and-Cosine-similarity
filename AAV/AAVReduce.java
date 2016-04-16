@@ -1,18 +1,14 @@
 package package2;
 
 /*
-
 Author: Akash Darak
 Date: 03/24/2016
-
 */
 
 import java.util.HashMap;
 import java.io.IOException;
-
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.io.Text;
-
 
 public class AAVReduce extends Reducer<Text,Text,Text,Text> {
 	
