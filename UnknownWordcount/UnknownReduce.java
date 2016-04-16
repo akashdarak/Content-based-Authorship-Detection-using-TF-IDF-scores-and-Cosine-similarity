@@ -1,21 +1,15 @@
 package package2;
 
 /*
-
 Author: Akash Darak
 Date: 03/25/2016
-
 */
 
 import java.io.IOException;
-//import java.util.Set;
-//import java.util.TreeSet;
-
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-	
 	  public class UnknownReduce extends Reducer<Text,IntWritable,Text,IntWritable> {
 		    private IntWritable result = new IntWritable();
 
@@ -29,7 +23,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 		      result.set(sum);
 		      context.write(key, result);
 		    }
-		  }
+	}
 
 
 
